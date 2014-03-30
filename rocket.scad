@@ -1,23 +1,48 @@
-module wing() {
+module wing(scale=10) {
 	rotate([90,0,0])
-	linear_extrude(height = 0.2, center = true)
-	polygon(points=[[0,0],[0,10],[7,7],[10,0]]);
-};
+	linear_extrude(height = scale*0.02, center = true)
+	polygon(points=[[0,0],[0,scale],[scale*0.7,scale*0.7],[scale,0]]);
+}
 
-module wingBase() {
+module rocket(scale=10) {
 	rotate([0,0,0])
-	wing();
+	wing(scale);
 
 	rotate([0,0,90])
-	wing();
+	wing(scale);
 
 	rotate([0,0,180])
-	wing();
+	wing(scale);
 
 	rotate([0,0,270])
-	wing();
+	wing(scale);
+
+	// Cylinder base
+	color("green",0.5)
+	cylinder(h = scale, r1=scale/4, r2=scale/3);
+
+	// Cylinder mid
+	midHeight = scale/2;
+	midWidth  = scale/3.5;
+	translate([0,0,scale])
+	color("red",0.5)
+	cylinder(h = midHeight, r1=scale/3, r2=midWidth);
+
+	// Cylinder long
+	longHeight = scale+midHeight;
+	translate([0,0,longHeight])
+	color("blue",0.5)
+	cylinder(h = scale*1.75, r1=midWidth, r2=scale/3.5);
+
+	coneHeight = scale*1.75+longHeight;
+	translate([0,0,coneHeight])
+	color("black",0.5)
+	cylinder(h = (scale/2), r1=midWidth, r2=0);
+
 }
 
 
-wingBase();
+
+
+rocket(20);
 
