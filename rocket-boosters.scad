@@ -56,9 +56,3 @@ module rocket(scale=10) {
 
 }
 
-
-
-
-
-rocket(20);
-
