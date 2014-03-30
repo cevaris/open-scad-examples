@@ -9,23 +9,22 @@ module moon(scale=1){
 }
 
 
+// Cow
 translate([0,0,1])
 color("red")
 cow();
 
+// Blue background
 color("blue")
 square([50,50], center=true);
 
-
-/*
-translate([0,0,5]) {
-	difference() {
-       cylinder (h = 4, r=1, center = true, $fn=100);
-        rotate ([90,0,0]) cylinder (h = 4, r=0.9, center = true, $fn=100);
-	}
-}
-*/
-
-translate([0,0,10]) {
+// Moon
+translate([15,-15,1.1]) {
+	scale([3,3,1])
 	moon();	
 }
+
+// Text
+translate([-23,15,0])
+scale([0.65,0.65,1])
+write("Goodnight Cow jumping over the moon",h=3,t=1);
