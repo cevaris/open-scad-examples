@@ -21,6 +21,7 @@ rotate([90,0,0]){
 
 translate([-20,0,-20])	
 scale([0.5,0.5,1])	
+color  ("black") 
 rotate([90,0,0]) {
 	translate([0,0,0])
 	write("One evening",h=3,t=1);

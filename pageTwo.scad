@@ -1,7 +1,7 @@
 //start
 module  middleLine() 
 { 
-color  ([1,0.6,0.8]) 
+color  ("purple") 
 { 
             polygon(points = [
 [-16.15,-2.45]
@@ -26,7 +26,7 @@ color  ([1,0.6,0.8])
 //start
 module  outerMoon() 
 { 
-color  ([0.2,0.8,0.6]) 
+color  ("purple") 
 { 
             polygon(points = [
 [26.05,2.70]
@@ -48,7 +48,7 @@ color  ([0.2,0.8,0.6])
 //start
 module  innerMoon() 
 { 
-color  ([0,0.2,0.4]) 
+color  ("purple") 
 { 
             polygon(points = [
 [25.45,2.20]
@@ -69,7 +69,7 @@ color  ([0,0.2,0.4])
 //start
 module  boy() 
 { 
-color  ([0.2,0,1]) 
+color  ("white") 
 { 
             polygon(points = [
 [18.70,-13.10]

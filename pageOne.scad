@@ -1,7 +1,7 @@
 //start
 module  pageOneLines() 
 { 
-color  ([1,0.4,0.8]) 
+color  ("purple") 
 { 
             polygon(points = [
 [-7.80,19.15]
@@ -91,7 +91,7 @@ color  ([1,0.4,0.8])
 //start
 module  pageOneBoy() 
 { 
-color  ([0.6,0,1]) 
+color  ("white") 
 { 
             polygon(points = [
 [19.95,-11.70]
