@@ -3,6 +3,8 @@ use <write.scad>;
 
 rotate([90,0,0]){
 
+//	rotate([-90,0,0])
+//	translate([0,7,-8])
 	linear_extrude(height = 1)
 	rotate([-10,0,0])
 	translate([0,0,-1.5])
