@@ -34,7 +34,7 @@ module multiWindow(){
 }
 
 difference(){
-	tower(3);
+   tower(3);
 	multiWindow();	
 }
 
